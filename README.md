@@ -1,2 +1,2 @@
-# EstudosADS
- Repositorio para armazenar exercicios, anotações e outras coisas dos meus estudos na Faculdade
+# Estudos-ADS
+ Aqui irão ser armazenados todos os códigos, projetos e exercícios feitos na faculdade de Análise e Desenvolvimento de Sistemas

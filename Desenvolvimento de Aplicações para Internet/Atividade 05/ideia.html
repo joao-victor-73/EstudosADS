@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="João Victor M">
+    <meta name="descricao" content="Atividade 05 - DAI">
+
+    <title>ATIVIDADE 05</title>
+
+</head>
+
+<link rel="stylesheet" href="style_ideia.css">
+
+<body>
+    <div align="center">
+
+        <form>
+            <fieldset id="formulario" align="left">
+                <legend>Envie sua ideia de publicação!</legend>
+
+                <label>Nome: </label>
+                <input type="text" name="nome" class="nome_form" placeholder="Ex: Victor Salusa" required> <br>
+
+                <br>
+
+                <label>E-mail: </label>
+                <input type="email" name="email" class="email_form" placeholder="salusa-vic@email.com" required> <br>
+
+                <br>
+
+                <label>Texto: </label> <br>
+                <textarea rows="40" cols="200" maxlength="1000" id="area_texto"></textarea>
+
+                <div align="center">
+                    <input type="reset" name="clear" value="LIMPAR" class="butao_limpar">
+                    <a href="index.html">
+                        <input type="submit" name="button_submit" value="ENVIAR" class="butao_enviar"
+                            onclick="alert('Informações enviadas com sucesso');">
+                    </a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+
+</html>

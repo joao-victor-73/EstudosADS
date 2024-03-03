@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>ATIVIDADE 04 - CURRICULO</title>
+    <meta name="autor" content="João Victor M">
+    <meta name="descricao" content="Atividade 04 - DAI">
+
+</head>
+
+
+<body>
+    <h2 align="center"> |FICHA CURRICULAR| </h2>
+    <!--
+    
+    <table align="center" border="1" style="font-size: 25px;">
+        <tr>
+            <th align="left" colspan="3"> 1. CADASTRO PESSOAL </th>
+        </tr>
+    </table>
+-->
+
+    <forms>
+        <fieldset name="cadastro-pessoal" style="width: 80%; font-size: 25px;">
+            <legend>
+                <h2> 1. CADASTRO PESSOAL </h2>
+            </legend>
+
+            <label>Nome: </label>
+            <input type="text" name="nome" style="width: 85%;" /> <br>
+
+
+            <label>Endereço: </label>
+            <input type="text" name="endereco" style="width: 50%;" />
+
+            <label>CEP:</label>
+            <input type="number" name="cep" style="width: 22%;" /> <br>
+
+            <label>E-mail:</label>
+            <input type="email" name="email" style="width: 84%;" /> <br>
+
+            <label>Telefones:</label>
+            <input type="tel" name="telefone1" style="width: 25%;" placeholder="(xx) x.xxxx-xxxx" />
+
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+            <input type="tel" name="telefone2" style="width: 25%;" placeholder="(xx) x.xxxx-xxxx" />
+            <br>
+
+            <label>Cidade:</label>
+            <input type="text" name="cidade" style="width: 25%;" />
+
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+            <label>Estado:</label>
+            <input type="text" name="estado" style="width: 25%;" /> <br>
+
+            <label>Naturalidade:</label>
+            <input type="text" name="Naturalidade" style="width: 25%;" />
+
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+            <label>Estado:</label>
+            <input type="text" name="estado-naturalidade" style="width: 25%;" /> <br>
+
+            <label>Estado Civil:</label>
+            <select name="estado-civil" size="1">
+                <option>Solteiro</option>
+                <option>Namorando</option>
+                <option>Casado</option>
+                <option>Divorciado</option>
+                <option>Viúvo</option>
+            </select>
+
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+            <label>Idade:</label>
+            <input type="number" name="idade" style="width: 10%;" /> <br>
+
+        </fieldset>
+    </forms>
+
+    <forms>
+        <fieldset name="escolaridade" style="width: 80%; font-size: 25px;">
+            <legend>
+                <h2>2. Escolaridade </h2>
+            </legend>
+
+            <label>Nível: </label>
+
+
+            <input type="radio" name="nivel-escolarida"> Ensino Médio
+
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+            <input type="radio" name="nivel-escolarida"> Graduação
+            <br>
+
+            <label>Entidade de Ensino/Localidade:</label>
+            <input type="text" name="nome-entidade-ensino" style="width: 50%;"> <br>
+
+            <label>Área de Formação:</label>
+            <input type="text" name="area-formacao" style="width: 66%;"> <br>
+
+            <label>Ano de Conclusão</label>
+            <input type="number" name="conclusao-year" style="width: 25%;">
+        </fieldset>
+    </forms>
+
+
+    <forms>
+        <fieldset name="experiencia-profissional" style="width: 80%; font-size: 25px;">
+            <legend>
+                <h2>3. Experiência Profissional </h2>
+            </legend>
+
+            <label>Empresa:</label>
+            <input type="text" name="empresa" style="width: 69%;"> <br>
+
+            <label>Início (mês/ano):</label>
+            <input type="date" name="inicio">
+            <label>&nbsp&nbsp&nbsp&nbsp&nbsp Término (mês/ano):</label>
+            <input type="date" name="termino">
+            <br>
+
+            <label>Cargo:</label>
+            <input type="text" name="cargo" style="width: 43%;"> <br>
+
+            <label>Área de Atuação:</label>
+            <input type="text" name="atuacao" style="width: 30%;"> <br> <br>
+
+            <label>Descrição da Experiência:</label> <br>
+            <textarea rows="20" cols="100" maxlength="1000"></textarea>
+
+        </fieldset>
+    </forms>
+
+    <br> <br> <br>
+
+    <div align="center">
+        <input type="submit" name="button_submit" value="CONFIRMAR"
+            onclick="alert('Informações do seu curriculo foram enviadads com sucesso!');" style="font-size: 25px;">
+
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+        <input type="reset" name="resetar" value="LIMPAR" style="font-size: 25px;">
+    </div>
+
+</body>
+
+</html>

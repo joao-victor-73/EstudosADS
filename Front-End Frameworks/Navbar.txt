@@ -1,0 +1,79 @@
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Meu Perfil</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">Sobre Mim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Portfólio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Seção "Sobre Mim" -->
+<section id="sobre" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="foto-de-perfil.jpg" alt="Minha Foto" class="img-fluid rounded-circle">
+            </div>
+            <div class="col-md-8">
+                <h2>Meu Nome</h2>
+                <p>Descrição sobre mim. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h3>Habilidades</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Seção "Portfólio" -->
+<section id="portfolio" class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center">Meu Portfólio</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="projeto-1.jpg" alt="Projeto 1" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Projeto 1</h5>
+                        <p class="card-text">Descrição do Projeto 1.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="projeto-2.jpg" alt="Projeto 2" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Projeto 2</h5>
+                        <p class="card-text">Descrição do Projeto 2.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="projeto-3.jpg" alt="Projeto 3" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Projeto 3</h5>
+                        <p class="card-text">Descrição do Projeto 3.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

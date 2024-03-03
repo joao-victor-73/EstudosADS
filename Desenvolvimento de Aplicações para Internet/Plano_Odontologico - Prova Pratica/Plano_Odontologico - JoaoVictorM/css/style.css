@@ -1,0 +1,19 @@
+#cabecalho{
+    background-color: aquamarine; 
+    margin-left: 25%; 
+    margin-right: 25%;
+}
+
+#menu {
+    justify-content: baseline; 
+}
+
+#imagens_iniciais {
+    border-radius: 5%;
+    width: 50%; 
+    height: 50%;
+}
+
+#sobre_h3 {
+    font-style: italic;
+}

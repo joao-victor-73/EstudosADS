@@ -1,0 +1,53 @@
+body {
+    background-color: rgb(191, 209, 203);
+    font-size: 35px;
+}
+
+
+fieldset {
+    background-color: rgb(224, 255, 244);
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+
+    border: 2px groove;
+    border-color: black;
+
+    width: 250px;
+    height: auto;
+}
+
+legend {
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input.butao_enviar,
+input.butao_limpar {
+    margin: 0 auto;
+    border-radius: 10%;
+    width: 200px;
+    height: 80px;
+    font-size: 30px;
+    font-family: verdana;
+    background-color: rgb(211, 211, 255);
+}
+
+input.nome_form,
+input.email_form {
+    width: 80%;
+    height: 50px;
+
+    font-size: 30px;
+}
+
+#area_texto {
+    width: 1250px;
+    height: 625px;
+    font-size: 28px;
+}

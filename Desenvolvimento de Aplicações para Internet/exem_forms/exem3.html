@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EXEMPLO PRÁTICO 03</title>
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+    <form action="#" method="post">
+        <fieldset style="width: 25%;">
+            <legend align="center">
+                <h3>| CADASTRO DE CLIENTES |</h3>
+            </legend>
+
+            <label>Nome Completo: </label>
+            <input type="text" name="full_name" placeholder="Ex.: Joao da Silva" required> <br> <br>
+
+            <label>Escolha seu sexo: </label><br>
+            <input type="radio" name="gender" value="M"> Masculino <br>
+            <input type="radio" name="gender" value="F"> Feminino <br>
+            <input type="radio" name="gender" value="O"> Outros <br>
+            <br>
+
+            <label>Telefone: </label>
+            <input type="text" name="number" maxlength="11" placeholder="(XX) X.XXXX-XXXX"> <br> <br>
+
+            <label>Data de Nascimento: </label>
+            <input type="date"> <br> <br>
+
+            <label>E-mail: </label>
+            <input type="email" required placeholder="nome@email.com"> <br> <br>
+
+            <label>Senha: </label>
+            <input type="password" name="senha" maxlength="8" required placeholder="Cadastre uma senha"> <br> <br>
+
+            <div align="center">
+                <input type="submit" name="button_submit" value="ENVIAR"
+                    onclick="alert('Informações enviadas com sucesso');">
+                <input type="reset" name="clear" value="LIMPAR">
+            </div>
+
+        </fieldset>
+    </form>
+</body>
+
+</html>
+
+

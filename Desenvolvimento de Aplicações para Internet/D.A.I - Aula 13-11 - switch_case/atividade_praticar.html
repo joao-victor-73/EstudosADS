@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de D.A.I. - 13/11/23 -- Atividade </title>
+    <!-- Atividade para testar o switch case com a opcao do usuário. fiz com o que eu estudei -->
+</head>
+<body>
+    <script type="text/javascript">
+        let opcao = Number(prompt("As opções disponíveis são: / 1 - Somar dois números / 2 - Abrir uma pagina aleatoria / 3 - Não fazer nada"))
+
+        switch(opcao){
+            case 1:
+                let n1 = Number(window.prompt('Digite um número: '))
+                let n2 = Number(prompt('Digite outro número: '))
+
+                s = n1 + n2
+
+                window.alert(`A soma de ${n1} + ${n2} resultou em ${s}`)
+                break;
+
+            case 2:
+                window.location.href="https://www.google.com/"
+                break;
+
+            case 3:
+                window.alert("Obrigado!")
+                break;
+
+            default:
+                document.write("Opção invalida")
+        }
+
+
+    </script>
+</body>
+</html>

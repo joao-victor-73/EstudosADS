@@ -1,0 +1,65 @@
+body {
+    background-color: rgb(191, 209, 203);
+    font-size: 20px;
+}
+
+.container {
+    display: flex;
+    margin-top: 30px;
+
+}
+
+.cabecalho {
+    background-color: rgb(152, 200, 184);
+    border-radius: 20px;
+    width: 500px;
+    height: 200px;
+
+
+    margin: auto;
+    text-align: center;
+    /* alinha o texto no centro */
+
+    display: grid;
+    /* O elemento se comporta como um elemento de bloco e apresenta seu conteúdo de acordo com o modelo de grade */
+}
+
+.imagem_cabecalho {
+    border-radius: 25%;
+    display: block;
+
+    margin-top: 50%;
+    margin-left: 300%;
+
+    width: 100px;
+    height: 100px;
+
+}
+
+#titulo {
+    font-size: 30px;
+}
+
+#subtitulo {
+    font-size: 25px;
+}
+
+.exemplo1 {
+    padding-left: 15px;
+    /* afasta da borda internamente */
+
+    height: 500px;
+    /*Altura da linha*/
+    border-left: 4px solid;
+
+    background-color: rgb(199, 206, 253);
+
+    height: auto;
+
+    margin-left: 8%;
+    margin-right: 12%;
+}
+
+#ideia_forms {
+    padding-left: 55px;
+}
