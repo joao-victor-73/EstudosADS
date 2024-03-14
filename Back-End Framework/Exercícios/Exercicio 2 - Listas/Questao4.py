@@ -19,3 +19,25 @@ for i, mes in meses.items():
 
     # Somando todos os valores digitados
     soma += temp
+
+    apresentacao_temperaturas.append(
+        f"{i} -- {mes} tem uma temperatura de {temp} ºC")
+
+
+media = soma / len(meses) # Variável para armazenar a média
+
+# Apresentação de todas as temperaturas junto com os meses(por extenso e curto)
+print("\nAs temperaturas digitadas foram: ")
+for m in apresentacao_temperaturas:
+    print(m)
+
+print(f"\nA média das temperaturas de todos os meses é de {media}ºC")
+
+# Fazendo a operação para saber se os valores são maiores que a média
+for i, temp in enumerate(list_temperaturas, 1):
+    if temp > media:
+        temp_acima.append(f"{i} -- {meses[i]}: {temp} ºC")
+
+print("\nAs temperaturas acima da média foram: ")
+for media_acima in temp_acima:
+    print(media_acima)
