@@ -35,25 +35,35 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-            decoration: BoxDecoration(
-              color: Colors.greenAccent,
-              border: Border.all(
-                color: Colors.teal,
-                width: 2,
-              ),
-            ),
-            padding: const EdgeInsets.all(10),
-            height: 300,
-            width: 400,
-            child: const Text(
-              'Exemplo de Container',
-              style: TextStyle(color: Colors.white, fontSize: 20),
-            )));
+        body: Center(
+            child: Container(
+                decoration: BoxDecoration(border: Border.all(width: 4)),
+                height: 400,
+                width: 200,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      width: 100,
+                      height: 100,
+                      color: Colors.red,
+                    ),
+                    Container(
+                      width: 100,
+                      height: 100,
+                      color: Colors.yellow,
+                    ),
+                    Container(
+                      width: 100,
+                      height: 100,
+                      color: Colors.green,
+                    ),
+                  ],
+                ))));
   }
 }
 
-/* Exemplo de Container
+/* Exemplo de Usos no Container
 
 class _MyHomePageState extends State<MyHomePage> {
   @override
