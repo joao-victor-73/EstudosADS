@@ -1,7 +1,11 @@
-import cadastro as c
-
-
 def escolha_tipo_produto():
+    """
+    Função que tem por objetivo passar uma tabela com os tipos de itens possíveis
+    para cadastramento dentro do nosso sistema. Sendo a escolha feita digitando
+    um número inteiro (1, 2, 3, 4 ou 5).
+
+    <Falta implementar um caso de exceção>
+    """
 
     print("=" * 60)
     print(f"        <=========== {'SOFTWARE DE PRODUTOS'} ===========>")
@@ -10,15 +14,16 @@ def escolha_tipo_produto():
     print("     3 - Produtos de Limpeza")
     print("     4 - Higiene")
     print("     5 - Outros")
+    print("     6 - Voltar")
     print("=" * 60)
 
-    op_produtos = int(input("Qual a opção desejada? "))
+    op_produtos = int(input("Qual o tipo de produto desejado? "))
 
     return op_produtos
 
 
 def cadastrando(tipo):
-
+    print()
     if tipo == 1:  # ALimento
         prod = input("Qual o nome do produto a ser armazenado:  ").capitalize()
 
@@ -45,32 +50,312 @@ def cadastrando(tipo):
         produtos_outros.append(prod)
 
 
-def atualizacao(tipo):
-    if tipo == 1:  # ALimento
+def atualizar(tipo):
+
+    if tipo == 1:
+        print("=" * 25)
         for p in produtos_alimentos:
-            print("Os produtos encontrados na Aba de alimentos foi: ")
-            print(f"{p} -", end=" ")
+            print(p)
+        print("=" * 25)
+
+        att = input("\nQual produto deseja att? ")
+
+        if att in produtos_alimentos:
+            indice = produtos_alimentos.index(att)
+
+            produtos_alimentos[indice] = input(
+                "Digite o novo produto: ").capitalize()
+
+            print("=" * 25)
+            print("A nova lista de alimentos ficou assim:")
+            for p in produtos_alimentos:
+                print(p)
+            print("=" * 25)
+
+        else:
+            print("Produto não está na lista de produtos. Tente novamente")
+            atualizar(tipo)
+
+    if tipo == 2:
+        print("=" * 25)
+        for p in produtos_bebidas:
+            print(p)
+        print("=" * 25)
+
+        att = input("\nQual produto deseja att? ")
+
+        if att in produtos_bebidas:
+            indice = produtos_bebidas.index(att)
+
+            produtos_bebidas[indice] = input(
+                "Digite o novo produto: ").capitalize()
+
+            print("=" * 25)
+            print("A nova lista de alimentos ficou assim:")
+            for p in produtos_bebidas:
+                print(p)
+            print("=" * 25)
+
+        else:
+            print("Produto não está na lista de produtos. Tente novamente")
+            atualizar(tipo)
+
+    if tipo == 3:
+        print("=" * 25)
+        for p in produtos_limpeza:
+            print(p)
+        print("=" * 25)
+
+        att = input("\nQual produto deseja att? ")
+
+        if att in produtos_limpeza:
+            indice = produtos_limpeza.index(att)
+
+            produtos_limpeza[indice] = input(
+                "Digite o novo produto: ").capitalize()
+
+            print("=" * 25)
+            print("A nova lista de alimentos ficou assim:")
+            for p in produtos_limpeza:
+                print(p)
+            print("=" * 25)
+
+        else:
+            print("Produto não está na lista de produtos. Tente novamente")
+            atualizar(tipo)
+
+    if tipo == 4:
+        print("=" * 25)
+        for p in produtos_higiene:
+            print(p)
+        print("=" * 25)
+
+        att = input("\nQual produto deseja att? ")
+
+        if att in produtos_higiene:
+            indice = produtos_higiene.index(att)
+
+            produtos_higiene[indice] = input(
+                "Digite o novo produto: ").capitalize()
+
+            print("=" * 25)
+            print("A nova lista de alimentos ficou assim:")
+            for p in produtos_higiene:
+                print(p)
+            print("=" * 25)
+
+        else:
+            print("Produto não está na lista de produtos. Tente novamente")
+            atualizar(tipo)
+
+    if tipo == 5:
+        print("=" * 25)
+        for p in produtos_outros:
+            print(p)
+        print("=" * 25)
+
+        att = input("\nQual produto deseja att? ")
+
+        if att in produtos_outros:
+            indice = produtos_outros.index(att)
+
+            produtos_outros[indice] = input(
+                "Digite o novo produto: ").capitalize()
+
+            print("=" * 25)
+            print("A nova lista de alimentos ficou assim:")
+            for p in produtos_outros:
+                print(p)
+            print("=" * 25)
+
+        else:
+            print("Produto não está na lista de produtos. Tente novamente")
+            atualizar(tipo)
 
 
-def validacao():
-    print("=" * 60)
-    print(">> Caso queira adicionar mais produtos, digite S")
-    print(">> Caso queira sair do cadastramento de produtos, digite N.")
-    sair = input(">> [S] ou [N] ").upper().split()[0]
-    print("=" * 60)
+def listar_contar(tipo):
 
-    return sair
+    if tipo == 1:
+        print("=" * 50)
+        print("< Os produtos cadastrados na categoria de alimentos são:  >\n")
+        for p in produtos_alimentos:
+            print(f"| {p} |")
+
+        print(f"\nE temos um total de {
+              len(produtos_alimentos)} itens na lista")
+        print("=" * 50)
+
+    elif tipo == 2:
+        print("=" * 50)
+        print("< Os produtos cadastrados na categoria de alimentos são:  >\n")
+        for p in produtos_bebidas:
+            print(f"| {p} |")
+        print(f"\nE temos um total de {len(produtos_bebidas)} itens na lista")
+        print("=" * 50)
+
+    elif tipo == 3:
+        print("=" * 50)
+        print("< Os produtos cadastrados na categoria de alimentos são:  >\n")
+        for p in produtos_limpeza:
+            print(f"| {p} |")
+        print(f"\nE temos um total de {len(produtos_limpeza)} itens na lista")
+        print("=" * 50)
+
+    elif tipo == 4:
+        print("=" * 50)
+        print("< Os produtos cadastrados na categoria de alimentos são:  >\n")
+        for p in produtos_higiene:
+            print(f"| {p} |")
+        print(f"\nE temos um total de {len(produtos_higiene)} itens na lista")
+        print("=" * 50)
+
+    elif tipo == 5:
+        print("=" * 50)
+        print("< Os produtos cadastrados na categoria de alimentos são:  >\n")
+        for p in produtos_outros:
+            print(f"| {p} |")
+        print(f"\nE temos um total de {len(produtos_outros)} itens na lista")
+        print("=" * 50)
+
+    nada = input("\nPressione ENTER para voltar a tela de seleção de tipos!")
 
 
+def deletar(tipo):
 
-# Declarações de variáveis
+    if tipo == 1:
+        print("=" * 50)
+        print("Os produtos na lista de Alimentos são:")
+        for p in produtos_alimentos:
+            print(p)
+        print("=" * 50)
+
+        apagar = input(
+            "\nDigite o nome do produto que deseja deletar: ").capitalize()
+
+        if apagar in produtos_alimentos:
+            indice = produtos_alimentos.index(apagar)
+
+            del produtos_alimentos[indice]
+
+            print(f">>> O PRODUTO {apagar} FOI DELETADO COM SUCESSO! <<<")
+
+        print("=" * 50)
+        print("Os produtos na lista de alimentos são: " if len(
+            produtos_alimentos) > 1 else "O produto na lista de alimentos é:")
+        for p in produtos_alimentos:
+            print(p)
+        print("=" * 50)
+        nada = input("Digite ENTER para continuar! ")
+
+
+    elif tipo == 2:
+        print("=" * 50)
+        print("Os produtos na lista de Bebidas são:")
+        for p in produtos_bebidas:
+            print(p)
+        print("=" * 50)
+
+        apagar = input(
+            "\nDigite o nome do produto que deseja deletar: ").capitalize()
+
+        if apagar in produtos_bebidas:
+            indice = produtos_bebidas.index(apagar)
+
+            del produtos_bebidas[indice]
+
+            print(f">>> O PRODUTO {apagar} FOI DELETADO COM SUCESSO! <<<")
+
+        print("=" * 50)
+        print("Os produtos na lista de Bebidas são: " if len(produtos_bebidas) > 1 else "O produto na lista de alimentos é: ")
+        for p in produtos_bebidas:
+            print(p)
+        print("=" * 50)
+        nada = input("Digite ENTER para continuar! ")
+
+
+    elif tipo == 3:
+        print("=" * 50)
+        print("Os produtos na lista de Prod. de Limpeza são:")
+        for p in produtos_limpeza:
+            print(p)
+        print("=" * 50)
+
+        apagar = input(
+            "\nDigite o nome do produto que deseja deletar: ").capitalize()
+
+        if apagar in produtos_limpeza:
+            indice = produtos_limpeza.index(apagar)
+
+            del produtos_limpeza[indice]
+
+            print(f">>> O PRODUTO {apagar} FOI DELETADO COM SUCESSO! <<<")
+
+        print("=" * 50)
+        print("Os produtos de limpeza na lista são: " if len(produtos_limpeza) > 1 else "O produto de limpeza na lista é: ")
+        for p in produtos_limpeza:
+            print(p)
+        print("=" * 50)
+        nada = input("Digite ENTER para continuar! ")
+
+
+    elif tipo == 4:
+        print("=" * 50)
+        print("Os produtos na lista de Prod. de Higiene são:")
+        for p in produtos_higiene:
+            print(p)
+        print("=" * 50)
+
+        apagar = input(
+            "\nDigite o nome do produto que deseja deletar: ").capitalize()
+
+        if apagar in produtos_higiene:
+            indice = produtos_higiene.index(apagar)
+
+            del produtos_higiene[indice]
+
+            print(f">>> O PRODUTO {apagar} FOI DELETADO COM SUCESSO! <<<")
+
+        print("=" * 50)
+        print("Os produtos de limpeza na lista são:" if len(produtos_higiene) > 1 else "O produto de limpeza na lista é: ")
+        for p in produtos_higiene:
+            print(p)
+        print("=" * 50)
+        nada = input("Digite ENTER para continuar! ")
+
+
+    elif tipo == 5:
+        print("=" * 50)
+        print("Os produtos na lista de Outros Prod. são:")
+        for p in produtos_outros:
+            print(p)
+        print("=" * 50)
+
+        apagar = input(
+            "\nDigite o nome do produto que deseja deletar: ").capitalize()
+
+        if apagar in produtos_outros:
+            indice = produtos_outros.index(apagar)
+
+            del produtos_outros[indice]
+
+            print(f">>> O PRODUTO {apagar} FOI DELETADO COM SUCESSO! <<<")
+
+        print("=" * 50)
+        print("Os Outros produtos na lista são: " if len(produtos_outros) > 1 else "O outro produto na lista é:")
+        for p in produtos_outros:
+            print(p)
+        print("=" * 50)
+        nada = input("Digite ENTER para continuar! ")
+
+
+# Declaração de variáveis:
 produtos_alimentos = []
 produtos_bebidas = []
 produtos_limpeza = []
 produtos_higiene = []
 produtos_outros = []
 
-def mensagem_inical():
+while True:
     print("=" * 60)
     print(f" <=========== {'SOFTWARE DE CADASTRO DE PRODUTOS'} ===========>")
     print("     1 - Cadastro de produto")
@@ -82,30 +367,43 @@ def mensagem_inical():
 
     op = int(input("Informe a opção desejada: "))
 
-    return op
+    if op == 1:
+        while True:
+            tipo_produto = escolha_tipo_produto()
 
-opcao = int(mensagem_inical())
+            if tipo_produto == 6:
+                break
 
-# Opçao de CADASTRAMENTO
-if opcao == 1:
-    while True:
-        cadastrando(escolha_tipo_produto())
+            cadastrando(tipo_produto)
 
-        # If para parar o Laço infinito.
-        if validacao() == 'N':
-            break
-        else:
-            continue
-    mensagem_inical()
+    elif op == 2:
+        while True:
+            tipo_produto = escolha_tipo_produto()
 
-# OPção para ALTERAR PRODUTO:
-elif opcao == 2:
-    while True:
-        atualizacao(escolha_tipo_produto())
+            if tipo_produto == 6:
+                break
 
-        # If para parar o Laço infinito.
-        if validacao() == 'N':
-            break
-        else:
-            continue
-    mensagem_inical()
+            atualizar(tipo_produto)
+
+    elif op == 3:
+        while True:
+            tipo_produto = escolha_tipo_produto()
+
+            if tipo_produto == 6:
+                break
+
+            listar_contar(tipo_produto)
+
+    elif op == 4:
+        while True:
+            tipo_produto = escolha_tipo_produto()
+
+            if tipo_produto == 6:
+                break
+
+            deletar(tipo_produto)
+
+    elif op == 5:
+        break
+
+print(produtos_alimentos)
