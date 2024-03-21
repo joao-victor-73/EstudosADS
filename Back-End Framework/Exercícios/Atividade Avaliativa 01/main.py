@@ -187,7 +187,7 @@ def listar_contar(tipo):
 
     elif tipo == 2:
         print("=" * 50)
-        print("< Os produtos cadastrados na categoria de alimentos são:  >\n")
+        print("< Os produtos cadastrados na categoria de bebidas são:  >\n")
         for p in produtos_bebidas:
             print(f"| {p} |")
         print(f"\nE temos um total de {len(produtos_bebidas)} itens na lista")
@@ -195,7 +195,7 @@ def listar_contar(tipo):
 
     elif tipo == 3:
         print("=" * 50)
-        print("< Os produtos cadastrados na categoria de alimentos são:  >\n")
+        print("< Os produtos cadastrados na categoria de limpeza são:  >\n")
         for p in produtos_limpeza:
             print(f"| {p} |")
         print(f"\nE temos um total de {len(produtos_limpeza)} itens na lista")
@@ -203,7 +203,7 @@ def listar_contar(tipo):
 
     elif tipo == 4:
         print("=" * 50)
-        print("< Os produtos cadastrados na categoria de alimentos são:  >\n")
+        print("< Os produtos cadastrados na categoria de higiene são:  >\n")
         for p in produtos_higiene:
             print(f"| {p} |")
         print(f"\nE temos um total de {len(produtos_higiene)} itens na lista")
@@ -211,7 +211,7 @@ def listar_contar(tipo):
 
     elif tipo == 5:
         print("=" * 50)
-        print("< Os produtos cadastrados na categoria de alimentos são:  >\n")
+        print("< Os produtos cadastrados na categoria de outros são:  >\n")
         for p in produtos_outros:
             print(f"| {p} |")
         print(f"\nE temos um total de {len(produtos_outros)} itens na lista")
