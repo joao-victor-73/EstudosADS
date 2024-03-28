@@ -57,6 +57,8 @@ OR ( departamento = 'Jardim' AND sexo = 'Masculino') -- Caso queira os func. fem
 ORDER BY departamento = 'Jardim';
 
 
+-- +-------------------------------------------------+-------------------------------------------------+
+
 CREATE DATABASE empresa_exer02; -- Modifiquei o nome do meu para empresa_exer02, mas na aula é usado 'exercicio'
 
 USE empresa_exer02;
