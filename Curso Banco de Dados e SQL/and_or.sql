@@ -32,3 +32,12 @@ SEXO = 'M' AND ENDERECO LIKE '%RJ';
 SELECT NOME, SEXO, ENDERECO FROM CLIENTE
 WHERE
 SEXO = 'F' AND ENDERECO LIKE '%ESTACIO';
+
+
+/* 
+NO AND, a coluna que tiver mais informações vai na frente;
+NO OR, a coluna que tiver menos informações vai na frente.
+ 
+< Isso é para uma melhor perfomace do banco de dados.>
+
+*/
