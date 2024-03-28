@@ -1,5 +1,10 @@
 /* OBS: Para o MySQL o comentario é feito através do # */
 
+
+
+                    -- AQUI SE ENCONTRA TODOS OS CÓDIGOS E ANOTAÇÕES EM MYSQL, E EU DIVIDI EM
+                            -- OUTROS ARQUIVOS APENAS OS ASSUNTOS ESPECIFICOS.
+
 /* 
 Para o primeiro momento, vamos criar uma base de dados com a seguinte tabela:
 
@@ -10,7 +15,7 @@ CPF - NUMERICO(11)
 EMAIL - CARACTER(30)
 TELEFONE - CARACTER(30)
 ENDERECO - CARACTER(100)
-SEXO - CARACTER(1)
+sexo - CARACTER(1)
 
 
 E para criar um banco de dados usamos o comando:
@@ -98,7 +103,7 @@ INSERT INTO clientes VALUES('JORGE','M',NULL,885755896,'58748895','OSCAR CURY - 
                                 /* FORMA 02 - COLOCANDO AS COLUNAS */
 /* Você especifica o nome da tabela seguido pelos nomes das colunas nas quais deseja inserir valores e, em seguida, os valores a serem inseridos. */
 
-INSERT INTO clientes(NOME,SEXO,ENDERECO,TELEFONE,CPF) VALUES('LILIAN','F','SENADOR SOARES - TIJUCA - RIO DE JANEIRO - RJ','947785696',887774856);
+INSERT INTO clientes(NOME,sexo,ENDERECO,TELEFONE,CPF) VALUES('LILIAN','F','SENADOR SOARES - TIJUCA - RIO DE JANEIRO - RJ','947785696',887774856);
 
                                 /* FORMA 03 - INSERT COMPACTO - SOMENTE MYSQL */
 
@@ -106,9 +111,9 @@ INSERT INTO clientes VALUES('ANA','F','ANA@GLOBO.COM',85548962,'548556985','PRES
                           ('CARLA','F','CARLA@TERATI.COM.BR',7745828,'66587458','SAMUEL SILVA - CENTRO - BELO HORIZONTE - MG');
 
 /* Vai dar erro esses de baixo.*/
-INSERT INTO clientes(NOME,SEXO,ENDERECO,TELEFONE,CPF) VALUES('CLARA','F','SENADOR SOARES - TIJUCA - RIO DE JANEIRO - RJ','883665843',99999999999);
+INSERT INTO clientes(NOME,sexo,ENDERECO,TELEFONE,CPF) VALUES('CLARA','F','SENADOR SOARES - TIJUCA - RIO DE JANEIRO - RJ','883665843',99999999999);
 
-INSERT INTO clientes(NOME,SEXO,ENDERECO,TELEFONE,CPF) VALUES('CLARA','F','SENADOR SOARES - TIJUCA - RIO DE JANEIRO - RJ','883665843',22222222222);
+INSERT INTO clientes(NOME,sexo,ENDERECO,TELEFONE,CPF) VALUES('CLARA','F','SENADOR SOARES - TIJUCA - RIO DE JANEIRO - RJ','883665843',22222222222);
 
                                 /* INSERT INTO de mútliplas Linhas */
 
@@ -289,3 +294,41 @@ WHERE email LIKE '%gmail%';
 | CELIA | CELIA@GMAIL.COM |
 +-------+-----------------+
 */
+
+
+/*==========================================================================================
+                            A TABELA VERDADDE / OPERADORES LÓGICOS                                  
+  ==========================================================================================*/
+
+/* OPERADORES LÓGICOS 
+OR -> PARA QUE A SAIDA DA QUERY SEJA VERDADEIRA, BASTA QUE APENAS UMA CONDICAO SEJA VERDADEIRA.
+AND -> PARA QUE A SAIDA SEJA VERDADEIRA TODAS AS CONDICOES PRECISAM SER VERDADEIRAS.
+*/
+
+/* OR - OU */
+
+SELECT * FROM clientes;
+
+SELECT nome, sexo, endereco FROM clientes
+WHERE 
+sexo = 'M' OR endereco LIKE '%RJ';
+
+SELECT nome, sexo, endereco FROM clientes
+WHERE 
+sexo = 'M' AND endereco LIKE '%RJ';
+
+SELECT nome, sexo, endereco  FROM clientes
+WHERE
+sexo = 'F' OR endereco LIKE '%ESTACIO';
+
+/* AND - E */
+
+SELECT nome, sexo, endereco  FROM clientes
+WHERE 
+sexo = 'M' AND endereco LIKE '%RJ';
+
+SELECT nome, sexo, endereco FROM clientes
+WHERE
+sexo = 'F' AND endereco LIKE '%ESTACIO';
+
+  
