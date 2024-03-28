@@ -1,0 +1,10 @@
+A ideia do projeto consiste em juntar conhecimentos de FLASK, PYHTON, MYSQL, HTML e CSS
+
+Como funionará:
+
+    - Será feito um site simples com uma tela de login, a qual quando entrar, 
+        o usuário será capaz de registrar informações em um fórmulario.
+        informações como: nome, nota1, nota2, nota3, descricao do aluno.
+
+    - Essas informações serão armazenadas em um banco de dados, e acessadas em
+        uma outra página, que poderá ser visuálizada.
