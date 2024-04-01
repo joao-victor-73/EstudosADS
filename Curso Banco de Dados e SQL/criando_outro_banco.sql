@@ -336,6 +336,29 @@ tabela já existente.
         ADD nome_da_coluna tipo_de_dado;
         ---------------------------------------------------------------------------------
 
+        A posição das colunas em uma tabela é geralmente determinada pelo banco de dados 
+        e não é considerada uma propriedade fixa. 
+        
+        No entanto, você pode definir a posição relativa da nova coluna em relação às 
+        colunas existentes usando a cláusula AFTER ou FIRST, dependendo do SGBD que 
+        está utilizando.
+
+        USANDO AFTER:
+            Você pode usar a cláusula AFTER para especificar que a nova coluna deve 
+            ser adicionada após uma coluna específica existente.
+
+            ALTER TABLE nome_da_tabela
+            ADD nome_da_coluna tipo_de_dado AFTER nome_da_coluna_anterior;
+
+
+        USANDO FIRST:
+            Você pode usar a cláusula FIRST para especificar que a nova coluna deve 
+            ser adicionada como a primeira coluna na tabela.
+
+            ALTER TABLE nome_da_tabela
+            ADD nome_da_coluna tipo_de_dado FIRST;
+        ---------------------------------------------------------------------------------
+
 
     >>> MODIFICAR UMA COLUNA EXISTENTE:
         Você pode alterar a definição de uma coluna existente, como seu tipo de dado ou 
@@ -356,6 +379,11 @@ tabela já existente.
 
         ALTER TABLE nome_da_tabela
         CHANGE nome_antigo nome_novo tipo_de_dado;
+        ---------------------------------------------------------------------------------
+
+        A dica é:
+            -> Quando quiser trabalhar com mudanças no nome de uma coluna, utilizar o CHANGE;
+            -> Quando quiser traballhar para mudar o tipo do dado, utilizar o MODIFY.
         ---------------------------------------------------------------------------------
 
 
