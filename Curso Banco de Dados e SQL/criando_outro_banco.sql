@@ -345,6 +345,19 @@ tabela já existente.
         MODIFY nome_da_coluna novo_tipo_de_dado;
         ---------------------------------------------------------------------------------
 
+        Também dá para utilizar o CHANGE no lugar de MODIFY.
+
+        O CHANGE é usado para renomear uma coluna e/ou modificar seu tipo de dado ou 
+        suas restrições em uma tabela existente. 
+        
+        Em alguns sistemas de gerenciamento de banco de dados (SGBDs), como MySQL, o 
+        CHANGE pode ser usado para alcançar o mesmo resultado que o MODIFY, além de 
+        permitir a alteração do nome da coluna simultaneamente.
+
+        ALTER TABLE nome_da_tabela
+        CHANGE nome_antigo nome_novo tipo_de_dado;
+        ---------------------------------------------------------------------------------
+
 
     >>> RENOMEAR UMA COLUNA:
         Você pode usar ALTER TABLE para renomear uma coluna em uma tabela existente.
