@@ -109,3 +109,210 @@ INSERT INTO telefone(tipo, numero, fk_idcliente) VALUES
 |         11 | CEL  | 632184987 |            2 |
 +------------+------+-----------+--------------+
 */
+
+
+
+
+/*==========================================================================================
+                          DIFERENÇA ENTRE SELEÇÃO, PROJEÇÃO E JUNÇÃO
+  ==========================================================================================
+
+"Seleção", "projeção" e "junção" são termos frequentemente usados em bancos de dados e 
+consultas SQL para descrever operações específicas que podem ser realizadas em conjuntos 
+de dados. Aqui está a diferença entre eles:
+
+    1. **Seleção (Selection)**:
+        - A seleção é uma operação que filtra as linhas de uma tabela com base em uma condição 
+        especificada, retornando apenas as linhas que atendem a essa condição.
+
+        - Na linguagem SQL, a seleção é realizada usando a cláusula `WHERE`.
+
+        - Exemplo: `SELECT * FROM tabela WHERE condição;`
+
+    2. **Projeção (Projection)**:
+        - A projeção é uma operação que seleciona colunas específicas de uma tabela, descartando 
+        as colunas que não são necessárias para a consulta.
+
+        - Na linguagem SQL, a projeção é realizada listando apenas as colunas desejadas após a 
+        cláusula `SELECT`.
+
+        - Exemplo: `SELECT coluna1, coluna2 FROM tabela;`
+
+    3. **Junção (Join)**:
+        - A junção é uma operação que combina dados de duas ou mais tabelas com base em uma 
+        condição de relacionamento entre elas.
+
+        - Na linguagem SQL, as junções são realizadas usando as cláusulas `JOIN`, como 
+        `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, etc., que especificam como as tabelas devem 
+        ser combinadas.
+
+        - Exemplo: `SELECT * FROM tabela1 INNER JOIN tabela2 ON tabela1.coluna = tabela2.coluna;`
+
+Em resumo, a seleção filtra as linhas com base em uma condição, a projeção seleciona 
+colunas específicas e a junção combina dados de várias tabelas com base em uma condição de 
+relacionamento. 
+
+Essas operações são essenciais para consultas SQL eficazes e para a manipulação de dados em 
+bancos de dados relacionais.
+
+*/
+
+
+
+
+/*==========================================================================================
+                                            JOIN 
+  ==========================================================================================
+
+  JOIN é uma cláusula em SQL que permite combinar linhas de duas ou mais tabelas com base 
+  em uma condição especificada. Essa operação é fundamental para recuperar dados de várias 
+  tabelas relacionadas em uma única consulta. Existem vários tipos de JOINs, cada um com 
+  seu próprio propósito e comportamento.
+
+  
+
+    ------------------------------------> INNER JOIN <------------------------------------
+    - O INNER JOIN retorna apenas as linhas que têm correspondências nas duas tabelas 
+    sendo unidas.
+
+    SINTAXE BÁSICA:
+
+        SELECT *
+        FROM tabela1
+        INNER JOIN tabela2
+        ON tabela1.coluna = tabela2.coluna;
+*/
+
+SELECT nome, sexo, bairro, cidade
+FROM cliente
+    INNER JOIN endereco
+    ON idcliente = fk_idcliente;
+
+
+                    /*
+                    +-------------+------+----------+----------------+
+                    | nome        | sexo | bairro   | cidade         |
+                    +-------------+------+----------+----------------+
+                    | Ana         | F    | Centro   | Belo Horizonte |
+                    | Jose Marcos | M    | Centro   | Rio de Janeiro |
+                    | Carlos      | M    | Jardins  | São Paulo      |
+                    | João        | M    | Estacio  | Rio de Janeiro |
+                    | Jorge       | M    | Flamengo | Rio de Janeiro |
+                    | Clara       | F    | Centro   | Vitoria        |
+                    +-------------+------+----------+----------------+
+                    */
+
+
+/*                      < FAZENDO UM INNER JOIN EM DUAS TABELAS >
+SELECT nome, sexo, bairro, cidade, telefone
+FROM cliente
+    INNER JOIN endereco
+    ON idcliente = fk_idcliente
+        INNER JOIN telefone
+        ON idcliente = fk_idcliente;
+
+
+As chaves estrangeiras nas tabelas <endereco> e <telefone> são iguais, e ai,
+o MYsql identifica isso como ambiguidade, ocorrendo em um erro na hora da execução;
+Para concertar isso, devemos ponderar dando alias para as tabelas.
+*/
+
+SELECT c.nome, c.sexo, e.bairro, e.cidade, t.numero
+FROM cliente c
+    INNER JOIN endereco e 
+    ON c.idcliente = e.fk_idcliente
+        INNER JOIN telefone t
+        ON c.idcliente = t.fk_idcliente;
+/*
+                +-------------+------+---------+----------------+-----------+
+                | nome        | sexo | bairro  | cidade         | numero    |
+                +-------------+------+---------+----------------+-----------+
+                | Jose Marcos | M    | Centro  | Rio de Janeiro | 115464741 |
+                | Jose Marcos | M    | Centro  | Rio de Janeiro | 415165165 |
+                | Jose Marcos | M    | Centro  | Rio de Janeiro | 165165189 |
+                | Carlos      | M    | Jardins | São Paulo      | 512651651 |
+                | Carlos      | M    | Jardins | São Paulo      | 151618949 |
+                | João        | M    | Estacio | Rio de Janeiro | 156484231 |
+                | João        | M    | Estacio | Rio de Janeiro | 132065165 |
+                | João        | M    | Estacio | Rio de Janeiro | 632184987 |
+                | Clara       | F    | Centro  | Vitoria        | 849878445 |
+                | Clara       | F    | Centro  | Vitoria        | 545151235 |
+                | Clara       | F    | Centro  | Vitoria        | 879841213 |
+                +-------------+------+---------+----------------+-----------+
+*/
+
+-- -----------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------
+
+
+/*
+    ------------------------------------> LEFT JOIN <------------------------------------
+    - O LEFT JOIN retorna todas as linhas da tabela à esquerda (tabela1), junto com as 
+    linhas correspondentes na tabela à direita (tabela2). Se não houver correspondência, 
+    o resultado conterá NULL na coluna da tabela à direita.
+
+    SINTAXE BÁSICA:
+        SELECT *
+        FROM tabela1
+        LEFT JOIN tabela2
+        ON tabela1.coluna = tabela2.coluna;
+ 
+*/
+
+
+-- -----------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------
+
+
+
+/*
+    ------------------------------------> RIGHT JOIN <------------------------------------
+    - O RIGHT JOIN retorna todas as linhas da tabela à direita (tabela2), junto com as 
+    linhas correspondentes na tabela à esquerda (tabela1). Se não houver correspondência, 
+    o resultado conterá NULL na coluna da tabela à esquerda.
+
+    SINTAXE BÁSICA:
+        SELECT *
+        FROM tabela1
+        RIGHT JOIN tabela2
+        ON tabela1.coluna = tabela2.coluna;
+
+
+*/
+
+
+-- -----------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------
+
+
+
+/*
+    ------------------------------------> FULL JOIN <------------------------------------
+    - O FULL JOIN retorna todas as linhas quando houver uma correspondência em uma das 
+    tabelas. 
+    Se não houver correspondência, o resultado conterá NULL na coluna sem correspondência.
+
+    SINTAXE BÁSICA:
+        SELECT *
+        FROM tabela1
+        FULL JOIN tabela2
+        ON tabela1.coluna = tabela2.coluna;
+
+
+
+*/
+
+-- -----------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------

@@ -1,0 +1,54 @@
+==========================================================================================
+                                    TIPOS DE COMANDOS SQL
+==========================================================================================
+
+Esses são tipos de comandos em SQL (Structured Query Language) que são agrupados em 
+quatro categorias principais, cada um com um propósito específico:
+
+    1. **DDL (Data Definition Language)**:
+        - DDL é usada para definir, modificar e excluir estruturas de banco de dados, 
+        como tabelas, índices e restrições.
+
+        - Exemplos de comandos DDL incluem `CREATE`, `ALTER` e `DROP`.
+
+        - Exemplos:
+            - `CREATE TABLE`: para criar uma nova tabela.
+            - `ALTER TABLE`: para modificar a estrutura de uma tabela existente.
+            - `DROP TABLE`: para excluir uma tabela.
+
+    2. **DML (Data Manipulation Language)**:
+        - DML é usada para manipular os dados dentro das tabelas de um banco de dados.
+
+        - Exemplos de comandos DML incluem `SELECT`, `INSERT`, `UPDATE` e `DELETE`.
+
+        - Exemplos:
+            - `SELECT`: para recuperar dados de uma ou mais tabelas.
+            - `INSERT INTO`: para adicionar novos registros a uma tabela.
+            - `UPDATE`: para modificar registros existentes em uma tabela.
+            - `DELETE FROM`: para excluir registros de uma tabela.
+
+    3. **DCL (Data Control Language)**:
+        - DCL é usada para controlar o acesso aos dados dentro do banco de dados.
+
+        - Exemplos de comandos DCL incluem `GRANT` e `REVOKE`.
+
+        - Exemplos:
+            - `GRANT`: para conceder permissões a usuários ou funções.
+            - `REVOKE`: para revogar permissões concedidas anteriormente.
+
+    4. **TCL (Transaction Control Language)**:
+        - TCL é usada para gerenciar transações em um banco de dados.
+
+        - Exemplos de comandos TCL incluem `COMMIT`, `ROLLBACK` e `SAVEPOINT`.
+
+        - Exemplos:
+            - `COMMIT`: para confirmar uma transação e fazer com que as mudanças 
+            sejam permanentes.
+            - `ROLLBACK`: para reverter uma transação e desfazer quaisquer alterações 
+            não confirmadas.
+            - `SAVEPOINT`: para definir pontos de salvamento em uma transação para 
+            permitir um rollback parcial.
+
+Essas categorias de comandos SQL são fundamentais para interagir com um banco de dados, 
+seja para definir sua estrutura, manipular os dados dentro dele, controlar o acesso aos 
+dados ou gerenciar transações.
