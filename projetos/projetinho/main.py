@@ -23,5 +23,10 @@ def login():
     return render_template('login.html')
 
 
+@app.route('/registro')
+def register():
+    return render_template('registro.html')
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
