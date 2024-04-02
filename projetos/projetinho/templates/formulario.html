@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block forms %}
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/formulario.css') }}">
+
+
+    <div class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>REGISTRANDO</h3>
+                        <p>Fill in the data below.</p>
+                        <form class="requires-validation" novalidate>
+                            
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="nome" placeholder="Nome Completo" required>
+                                <div class="valid-feedback">Username field is valid!</div>
+                                <div class="invalid-feedback">Username field cannot be blank!</div>
+                            </div>
+
+                            <div class='row mb-3'>
+                                <div class="col-md-12">
+                                    <input class="form-control" type="email" name="email" placeholder="E-mail" required>
+                                    <div class="valid-feedback">Email field is valid!</div>
+                                    <div class="invalid-feedback">Email field cannot be blank!</div>
+                                </div>
+                            </div>
+
+                            <div class='row mb-3'>
+                                <div class="col-md-12">
+                                    <input class="form-control" type="tel" name="telefone" placeholder="Número para Contato" required>
+                                    <div class="valid-feedback">Número é valido</div>
+                                    <div class="invalid-feedback">Algo errado com o número, tente denovo!</div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <select class="form-select mt-3" name='grupos' required>
+                                    <option selected disabled value="">Grupo</option>
+                                    <option value="s_jose1">São José (Adriana e Gabi)</option>
+                                    <option value="s_jose2">São José 2 (João)</option>
+                                    <option value="c_pastoral1">Centro Pastoral 1 ()</option>
+                                    <option value="c_pastoral2">Centro Pastoral 2 ()</option>
+                                    <option value="c_pastoral3">Centro Pastoral 3 ()</option>
+                                    <option value="c_pastoral4">Centro Pastoral 4 ()</option>
+                                    <option value="c_pastoral5">Centro Pastoral 5 ()</option>
+                                </select>
+                                    <div class="valid-feedback">Você selecionou seu grupo</div>
+                                    <div class="invalid-feedback">Por favor, selecione seu grupo!</div>
+                            </div>
+
+
+                            <div class="mb-12">
+                                <label for="descricaoPessoa" class="form-label">Descreva sobre a pessoa</label>
+                                <textarea class="form-control" id="descricaoPessoa" rows="5"></textarea>
+                            </div>
+
+
+                            <div class="col-md-12 mt-3">
+                                <label class="mb-3 mr-1" for="gender">Gênero: </label>
+
+                                <input type="radio" class="btn-check" name="gender" id="male" autocomplete="off" required>
+                                <label class="btn btn-sm btn-outline-secondary" for="male">Masculino</label>
+
+                                <input type="radio" class="btn-check" name="gender" id="female" autocomplete="off" required>
+                                <label class="btn btn-sm btn-outline-secondary" for="female">Feminino</label>
+
+                                <div class="valid-feedback mv-up">You selected a gender!</div>
+                                    <div class="invalid-feedback mv-up">Please select a gender!</div>
+                                </div>
+
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label">Confirmo que tudo está correto</label>
+                            <div class="invalid-feedback">Please confirm that the entered data are all correct!</div>
+                            </div>
+                    
+
+                                <div class="form-button mt-3">
+                                    <button id="submit" type="submit" class="btn btn-primary">Register</button>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock forms %}
