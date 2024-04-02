@@ -18,7 +18,7 @@ def lista():
     return render_template('lista.html')
 
 
-@app.route('/')
+@app.route('/login')
 def login():
     return render_template('login.html')
 
