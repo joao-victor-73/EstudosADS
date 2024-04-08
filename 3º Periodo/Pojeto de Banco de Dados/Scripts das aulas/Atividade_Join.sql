@@ -28,11 +28,13 @@ CREATE TABLE emprestimos(
 
 -- Criar regra de chave estrangeira
 ALTER TABLE emprestimos
+
 ADD CONSTRAINT fk_emprestimos_livros
 FOREIGN KEY (fk_idLivro)
 REFERENCES livros(idLivro)
 ON DELETE CASCADE
 ON UPDATE CASCADE,
+
 ADD CONSTRAINT fk_emprestimos_clientes
 FOREIGN KEY (fk_idCliente)
 REFERENCES clientes(idCliente)
@@ -40,7 +42,7 @@ ON DELETE CASCADE
 ON UPDATE CASCADE;
 
 -- Inserindo registros nas tabelas
-INSERT INTO livros (titulo, autor, genero, anoPublicacao) VALUES
+INSERT INTO livros (titulo, autor, genero, anoPublicacao) VALUES    
     ('Dom Casmurro', 'Machado de Assis', 'Romance', '1901'),
     ('1984', 'George Orwell', 'Ficção Científica', '1949'),
     ('O Pequeno Príncipe', 'Antoine de Saint-Exupéry', 'Infantil', '1943'),
