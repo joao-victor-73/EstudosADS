@@ -1,0 +1,15 @@
+/* Estilos personalizados para centralizar o formulário */
+.container-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Definir a altura para ocupar toda a altura da tela */
+}
+.form-box {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Definir a largura máxima do formulário */
+  width: 100%; /* Definir a largura para ocupar toda a largura do container */
+}

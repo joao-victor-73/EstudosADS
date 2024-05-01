@@ -1,0 +1,49 @@
+{% extends 'base.html' %} 
+
+{% block conteudo %}
+    <!-- Linkando arquivo CSS para a página index.html-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+
+
+    <div class="container-box">
+        <div class="form-box">
+            <form action="/", method="POST">
+                <div class="mb-3">
+                    <label for="insiraProduto" class="form-label">Nome do Produto</label>
+                    <input name="" type="text" class="form-control" id="insiraProduto" placeholder="Digite o nome do produto">
+                </div>
+
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="insiraPreco" class="form-label">Preço do Produto</label>
+                        <input name="insiraPreco" type="number" step="0.01" class="form-control" id="insiraPreco">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="insiraQuant" class="form-label">Quantidade do Produto</label>
+                        <input name="insiraQuant" type="number" class="form-control" id="insiraQuant">
+                    </div>
+                </div>
+
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="dataCompra" class="form-label">Selecione uma data:</label>
+                        <input name="dataCompra" type="date" id="dataCompra" class="form-control">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="horaCompra" class="form-label">Selecione uma hora:</label>
+                        <input name="horaCompra" type="time" id="horaCompra" class="form-control">
+                    </div>
+                </div>
+
+                <br>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+
+{% endblock conteudo %}
