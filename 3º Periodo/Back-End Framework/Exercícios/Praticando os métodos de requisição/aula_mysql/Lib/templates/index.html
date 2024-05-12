@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 02-05</title>
+</head>
+<body>
+
+    <h1 style='text-align:center'>Cadastro de Funcionarios</h1>
+   
+    <table>
+        <thead>
+            LISTA DE FUNCIONÁRIOS
+        </thead>
+
+        <tbody>
+            {% for funcionario in resultadoConsulta %}
+                <tr>
+                    <td> <li> {{funcionario}} </li> </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        
+        
+    </table>
+
+    <br> <br>
+
+    <h3> ADICIONAR FUNCIONÁRIO </h3>
+
+    <form action='/cadastraFuncionario' method='POST'>
+        <label> Nome do funcionario: </label>
+        <input type='text' name='NomeFuncionario'>
+        
+        <button type='submit'> ENVIAR </button>
+    </form>
+
+</body>
+</html>
