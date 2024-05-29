@@ -26,8 +26,13 @@ marcas_tecnologia = [
 
 ]
 
+# Criando uma lista de NOMES DE PRODUTOS para ser gerado aleatoriamente
+produto_tecnologia = [
+
+]
+
 # Criando uma lista de NOMES DE EMPRESA para ser gerado aleatoriamente
-nome_tecnologia = [
+nome_fornecedores = [
 
 ]
 
@@ -50,9 +55,29 @@ for _ in range(10):  # Gere 10 registros fictícios
 
 
 # Gerar e inserir dados fictícios para a tabela 'produtos'
+
 for _ in range(10):
-    nomeProduto = fake.random_element(nome_tecnologia)
+    preco_faker = round(fake.pyfloat(
+        min_value=10, max_value=100, right_digits=2), 2) 
+    # gerador de valores de preco entre 10 a 100
+    
+    em_estoque_faker = fake.random_int(min=1, max=20) # gerador de produtos em estoque entre 0 a 20
+
+    nomeProduto = fake.random_element(produto_tecnologia)
     marca = fake.random_element(marcas_tecnologia)
+    preco = preco_faker
+    em_estoque = em_estoque_faker
+
+
+# Gerar e inserir dados fictícios para a tabela 'fornecedor'
+for _ in range(10):
+    nomeFornecedor = fake.random_element(nome_fornecedores)
+    rua = fake.street_address()
+    bairro = fake.neighborhood()
+    cidade = fake.city()
+    email = fake.email()
+    telefone = fake.phone_number()
+    CEP = fake.postcode()
 
 
 mydb.commit()
