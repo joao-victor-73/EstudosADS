@@ -88,6 +88,7 @@ cursor = mydb.cursor()
 
 # Gerar e inserir dados fictícios para a tabela 'cliente'
 for _ in range(10):  # Gere 10 registros fictícios
+
     nomeCliente = fake.name()
     rua = fake.street_address()
     bairro = fake.neighborhood()
