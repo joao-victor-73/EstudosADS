@@ -1,12 +1,95 @@
-REGISTROS GERADOS NO DIA /06/2023
+REGISTROS GERADOS NO DIA 02/06/2023
 
 -> TABELA CLIENTE:
+
++------------+-------------+-----------------------+-----------------------------------+------------------------------------+----------------+--------------------------------+---------------------+-----------+
+| id_cliente | fk_idPedido | nomeCliente           | rua                               | bairro                             | cidade         | email                          | telefone            | CEP       |
++------------+-------------+-----------------------+-----------------------------------+------------------------------------+----------------+--------------------------------+---------------------+-----------+
+|          2 |           1 | Dante Oliveira        | Condomínio Ana Cecília Viana, 7   | São Jorge 1ª Seção                 | Porto          | teixeiracamila@example.com     | (061) 5342 4027     | 63304017  |
+|          3 |           2 | Gabriela Teixeira     | Aeroporto Yago Albuquerque        | Vila Nova Gameleira 2ª Seção       | Ribeiro        | manuella55@example.net         | +55 (084) 3311-9513 | 97885372  |
+|          4 |           3 | Helena Ramos          | Rodovia de Costa, 29              | Vila Nova Cachoeirinha 3ª Seção    | Cassiano       | silvazoe@example.net           | (011) 2655-0380     | 61125-574 |
+|          5 |           4 | Sr. Vicente das Neves | Estrada de Garcia, 68             | Padre Eustáquio                    | da Mota        | davi-lucascampos@example.com   | 61 5305 7301        | 95938621  |
+|          6 |           5 | Anthony Moura         | Via Manuella Borges, 52           | Vila Copacabana                    | Vasconcelos    | jose-miguelcardoso@example.net | +55 (084) 4172 5487 | 11308-000 |
+|          7 |           6 | Melina Nunes          | Morro de Gomes, 39                | Castanheira                        | Almeida        | oliviamontenegro@example.net   | 81 4164-4290        | 81234111  |
+|          8 |           7 | Sophia Ribeiro        | Fazenda Isabela Correia           | Vila Ouro Minas                    | Alves          | anna-lizteixeira@example.net   | +55 11 2297-9802    | 43657-238 |
+|          9 |           8 | Davi Miguel Cunha     | Núcleo de da Mota, 39             | Vila São Gabriel                   | da Conceição   | qnogueira@example.com          | 0800 599 3568       | 98971-212 |
+|         10 |           9 | Clara Borges          | Estação de Moraes                 | Vila Paquetá                       | Gonçalves      | ysilva@example.org             | (021) 7235-9607     | 84933730  |
+|         11 |          10 | Fernanda Pastor       | Condomínio Eduardo Silveira, 651  | Vila Nova Gameleira 3ª Seção       | Camargo Grande | leandro84@example.net          | +55 (051) 1833-1861 | 40768-207 |
++------------+-------------+-----------------------+-----------------------------------+------------------------------------+----------------+--------------------------------+---------------------+-----------+
+
+
+
+
+
+
+
 
 
 
 -> TABELA FORNECEDOR:
 
++---------------+----------------+-------------------------------+---------------------------+---------------------+-------------------------------+---------------------+-----------+
+| id_fornecedor | nomeFornecedor | rua                           | bairro                    | cidade              | email                         | telefone            | CEP       |
++---------------+----------------+-------------------------------+---------------------------+---------------------+-------------------------------+---------------------+-----------+
+|             1 | Micro Center   | Praça Davi Cardoso            | Bernadete                 | Aragão de Nunes     | luigimachado@example.org      | +55 (021) 0935 8062 | 60352-199 |
+|             2 | Micro Center 2 | Lagoa de Porto, 7             | Vila Coqueiral            | Machado da Mata     | siqueirahenry@example.net     | +55 (071) 4290-0268 | 54252082  |
+|             3 | Micro Center 3 | Lago de Nogueira, 38          | Morro Dos Macacos         | Fonseca de Sales    | joao-vitornunes@example.net   | 0500-868-0745       | 98045-852 |
+|             4 | Walmart        | Avenida Ribeiro, 63           | Flamengo                  | Vargas              | yaragao@example.net           | +55 61 7701 9656    | 49367273  |
+|             5 | Micro Center 4 | Campo de Pereira, 681         | Andiroba                  | Nunes               | ramoshelena@example.org       | (071) 1531 8380     | 26215697  |
+|             6 | Walmart 2      | Área Souza, 64                | Barroca                   | Machado             | gabriel33@example.net         | 0500 847 5484       | 91950770  |
+|             7 | Newegg         | Largo Benicio Porto, 65       | Vila Da Paz               | Peixoto             | caioda-cunha@example.net      | 31 2045 4935        | 29897-893 |
+|             8 | Walmart 3      | Campo Eloah Monteiro, 84      | Conjunto Capitão Eduardo  | Costa de Silva      | vitoria94@example.org         | 61 0174 2167        | 39785-902 |
+|             9 | Micro Center 5 | Área Murilo Caldeira, 19      | Santa Branca              | Santos da Prata     | mathiasmontenegro@example.org | +55 (081) 2816 7780 | 79729036  |
+|            10 | Micro Center 6 | Travessa de da Conceição, 2   | Carmo                     | Cavalcanti do Oeste | luiz-gustavodias@example.com  | 84 3992 9527        | 84663-241 |
++---------------+----------------+-------------------------------+---------------------------+---------------------+-------------------------------+---------------------+-----------+
+
+
+
+
+
+
+
+
 
 
 -> TABELA PRODUTOS:
 
++------------+-----------------+-------------------------+----------+-------+------------+
+| id_produto | fk_idFornecedor | nomeProduto             | marca    | preco | em_estoque |
++------------+-----------------+-------------------------+----------+-------+------------+
+|          1 |               2 | Teclado                 | Motorola | 57.84 |          5 |
+|          2 |               5 | Tablet                  | Sony     | 36.84 |          8 |
+|          3 |               4 | Notebook                | Acer     | 95.12 |          6 |
+|          4 |               3 | Suportes para Moto      | Seagate  | 66.16 |         13 |
+|          5 |               6 | HeadSet                 | Sony     | 72.55 |         16 |
+|          6 |               9 | Scanner                 | Motorola | 80.49 |          3 |
+|          7 |               7 | Monitor                 | Xiaomi   | 43.76 |         18 |
+|          8 |              10 | Microfones              | Sony     | 53.28 |         16 |
+|          9 |               8 | Caixas de Som Bluetooth | Kingston | 72.64 |         18 |
+|         10 |               1 | Impressora              | Sony     | 61.60 |         20 |
++------------+-----------------+-------------------------+----------+-------+------------+
+
+
+
+
+
+
+
+
+
+
+-> TABELA PEDIDOS:
++-----------+--------------+---------------------+--------------+
+| id_pedido | fk_idProduto | data_pedido         | fk_idCliente |
++-----------+--------------+---------------------+--------------+
+|         1 |            1 | 2024-07-01 10:00:00 |            2 |
+|         2 |            2 | 2024-07-01 11:30:00 |            3 |
+|         3 |            3 | 2024-07-01 10:47:40 |            4 |
+|         4 |            4 | 2024-07-01 15:44:12 |            5 |
+|         5 |            5 | 2024-07-01 16:55:59 |            6 |
+|         6 |            6 | 2024-08-01 08:41:44 |            7 |
+|         7 |            7 | 2024-08-01 09:00:44 |            8 |
+|         8 |            8 | 2024-08-01 10:11:10 |            9 |
+|         9 |            9 | 2024-08-01 10:11:55 |           10 |
+|        10 |           10 | 2024-08-01 15:55:01 |           11 |
++-----------+--------------+---------------------+--------------+
