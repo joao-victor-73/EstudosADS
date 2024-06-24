@@ -318,6 +318,54 @@ FROM cliente c
 -- -----------------------------------------------------------------------------------------------
 
 
+/*==========================================================================================
+                                CATEGORIAS DE COMANDOS 
+  ==========================================================================================
+
+  As categorias de comandos SQL são fundamentais para a manipulação e gerenciamento de dados 
+  em bancos de dados relacionais. 
+  
+  Eles são divididos em várias categorias principais, cada uma com uma finalidade específica. 
+  
+  Aqui estão as principais categorias de comandos SQL:
+    
+    -> DML (Data Manipulation Language - Linguagem de Manipulação de Dados):
+        > SELECT: Recupera dados de uma ou mais tabelas.
+        > INSERT: Insere novos registros em uma tabela.
+        > UPDATE: Modifica registros existentes em uma tabela.
+        > DELETE: Remove registros de uma tabela.
+
+
+    -> DDL (Data Definition Language - Linguagem de Definição de Dados):
+        > CREATE: Cria novos objetos no banco de dados (tabelas, índices, vistas, etc.).
+        > ALTER: Altera a estrutura de objetos existentes no banco de dados.
+        > DROP: Remove objetos do banco de dados.
+        > TRUNCATE: Remove todos os registros de uma tabela, mas mantém sua estrutura.
+
+
+    -> DCL (Data Control Language - Linguagem de Controle de Dados):
+        > GRANT: Concede permissões a usuários ou roles.  
+        > REVOKE: Revoga permissões concedidas anteriormente.
+
+
+    -> DQL (Data Query Language - Linguagem de Consulta de Dados):
+        > SELECT: Embora frequentemente considerado parte do DML, o SELECT 
+                é especificamente utilizado para consultas de dados e pode 
+                ser destacado como DQL.
+
+    -> TCL (Transaction Control Language - Linguagem de Controle de Transações):
+        > COMMIT: Confirma uma transação, tornando todas as suas mudanças permanentes.
+        > ROLLBACK: Reverte uma transação, desfazendo todas as suas mudanças.
+        > SAVEPOINT: Define um ponto dentro de uma transação para que parte dela possa ser revertida.
+
+
+
+-- -----------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------
+-- -----------------------------------------------------------------------------------------------
+
 
 /*==========================================================================================
                                         ALTER TABLE 
