@@ -1,0 +1,75 @@
+/* ===========================================================================
+							EXERCÍCIOS DE DML
+   =========================================================================== */
+
+					-- INSERINDO MAIS DADOS PARA AS TABELAS
+
+-- TABELA CLIENTE
+INSERT INTO CLIENTE VALUES
+    (NULL,'FLAVIO','M','FLAVIO@IG.COM','4657765'),
+    (NULL,'ANDRE','M','ANDRE@GLOBO.COM','7687567'),
+    (NULL,'GIOVANA','F',NULL,'0876655'),
+    (NULL,'KARLA','M','KARLA@GMAIL.COM','545676778'),
+    (NULL,'DANIELE','M','DANIELE@GMAIL.COM','43536789'),
+    (NULL,'LORENA','M',NULL,'774557887'),
+    (NULL,'EDUARDO','M',NULL,'54376457'),
+    (NULL,'ANTONIO','F','ANTONIO@IG.COM','12436767'),
+    (NULL,'ANTONIO','M','ANTONIO@UOL.COM','3423565'),
+    (NULL,'ELAINE','M','ELAINE@GLOBO.COM','32567763'),
+    (NULL,'CARMEM','M','CARMEM@IG.COM','787832213'),
+    (NULL,'ADRIANA','F','ADRIANA@GMAIL.COM','88556942'),
+    (NULL,'JOICE','F','JOICE@GMAIL.COM','55412256');
+
+-- TABELA ENDERECO
+INSERT INTO ENDERECO VALUES
+	(NULL,'RUA GUEDES','CASCADURA','B. HORIZONTE','MG',9),
+	(NULL,'RUA MAIA LACERDA','ESTACIO','RIO DE JANEIRO','RJ',10),
+	(NULL,'RUA VISCONDESSA','CENTRO','RIO DE JANEIRO','RJ',11),
+	(NULL,'RUA NELSON MANDELA','COPACABANA','RIO DE JANEIRO','RJ',12),
+    (NULL,'RUA ARAUJO LIMA','CENTRO','VITORIA','ES',13),
+    (NULL,'RUA CASTRO ALVES','LEBLON','RIO DE JANEIRO','RJ',14),
+    (NULL,'AV CAPITAO ANTUNES','CENTRO','CURITIBA','PR',15),
+    (NULL,'AV CARLOS BARROSO','JARDINS','SAO PAULO','SP',16),
+    (NULL,'ALAMEDA SAMPAIO','BOM RETIRO','CURITIBA','PR',17),
+    (NULL,'RUA DA LAPA','LAPA','SAO PAULO','SP',18),
+    (NULL,'RUA GERONIMO','CENTRO','RIO DE JANEIRO','RJ',19),
+    (NULL,'RUA GOMES FREIRE','CENTRO','RIO DE JANEIRO','RJ',20),
+    (NULL,'RUA GOMES FREIRE','CENTRO','RIO DE JANEIRO','RJ',21);
+    
+    
+-- TABELA TELEFONE
+INSERT INTO TELEFONE VALUES
+	(NULL,'RES','68976565',9),
+    (NULL,'CEL','99656675',9),
+    (NULL,'CEL','33567765',11),
+    (NULL,'CEL','88668786',11),
+    (NULL,'COM','55689654',11),
+    (NULL,'COM','88687979',12),
+    (NULL,'COM','88965676',13),
+    (NULL,'CEL','89966809',15),
+    (NULL,'COM','88679978',16),
+    (NULL,'CEL','99655768',17),
+    (NULL,'RES','89955665',18),
+    (NULL,'RES','77455786',19),
+    (NULL,'RES','89766554',19),
+    (NULL,'RES','77755785',20),
+    (NULL,'COM','44522578',20);
+
+-- -----------------------------------------------------------
+
+			-- QUESTÕES DO EXERCÍCIO
+            
+-- 1. RELATÓRIO GERAL DE TODOS OS CLIENTES 
+DESC endereco;
+DESC cliente;
+DESC telefone;
+
+SELECT c.*, e.rua, e.bairro, e.cidade, e.estado, t.tipo, t.numero
+FROM cliente c
+	INNER JOIN endereco e
+    ON c.idcliente = e.fk_idcliente
+		INNER JOIN telefone t
+        ON c.idcliente = t.fk_idcliente;
+        
+
+-- 2. 
